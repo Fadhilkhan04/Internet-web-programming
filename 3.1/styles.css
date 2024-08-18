@@ -20,19 +20,49 @@ a{
 }
 
 .content{
-  text-align: center;
+  align-items: center;
   height: 100vh;
-  padding-top: 200px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 h1{
   font-size: 100px;
   font-weight: bolder;
   margin: 0;
+  text-align: center;
 }
 
 body{
-  background-image: url(./images/small.avif );
+  background-image: url();
   background-size: cover;
   background-position: center;
 }
+.work{
+ 
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  align-items: center;  
+}
+.subwork{
+  padding: 40px;
+}
+h2{
+  text-align: center;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+}
+.last{
+  display: inline-block;
+}
+.copyright{
+  display:inline-block;
+}
+
+
