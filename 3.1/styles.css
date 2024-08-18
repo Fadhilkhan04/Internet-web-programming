@@ -62,7 +62,7 @@ h2{
   display: inline-block;
 }
 .copyright{
-  display:inline-block;
+  float: right;
 }
 
 
