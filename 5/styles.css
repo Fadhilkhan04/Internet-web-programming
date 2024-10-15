@@ -1,0 +1,38 @@
+
+html{
+  margin: 0;
+  border: 0;
+  font-family: poppins;
+}
+h1{
+  text-align: center;
+}
+#datetime{
+  text-align: end;
+  font-size: small;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.sub{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+button{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.last{
+  display: flex;
+  justify-content: center;
+}
+.like{
+  font-size: 15px;  
+}
+.share{
+  font-size: 15px;
+}
+
