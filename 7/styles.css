@@ -20,9 +20,9 @@ body {
   height: 300px;
   overflow: hidden;
   position: relative;
-  border: 5px solid whitesmoke; /* White border around images */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  border: 5px solid whitesmoke; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
 }
 
 #slideshow {
@@ -43,8 +43,6 @@ body {
   animation: fade 1s ease forwards, fade 3s ease infinite;
   opacity: 0;
 }
-
-
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
