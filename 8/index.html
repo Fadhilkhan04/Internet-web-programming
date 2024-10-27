@@ -4,6 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment 8</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h2>MCQ QUIZ</h2>
+      <div class="timer">Time Left: <span id="time">1:00</span></div>
+      <form id="mcqquizform">
+        <p>
+          1.Which Football club has the most number of champions league trophy
+        </p>
+        <input type="radio" id="realmadrid" name="club" value="realmadrid" />
+        <label for="realmadrid">Realmadrid</label><br />
+        <input type="radio" id="Acmilan" name="club" value="Acmilan" />
+        <label for="Acmilan">Acmilan</label><br />
+        <input type="radio" id="liverpool" name="club" value="liverpool" />
+        <label for="liverpool">liverpool</label><br />
+
+        <p>2.What is the chemical symbol for iron</p>
+        <input type="radio" id="hg" name="chem" value="hg" />
+        <label for="hg">hg</label><br />
+        <input type="radio" id="fe" name="chem" value="fe" />
+        <label for="fe">fe</label><br />
+        <input type="radio" id="ir" name="chem" value="ir" />
+        <label for="ir">ir</label><br />
+
+        <p>3.which planet is known as the red planet</p>
+        <input type="radio" id="venus" name="planet" value="venus" />
+        <label for="venus">venus</label><br />
+        <input type="radio" id="saturn" name="planet" value="saturn" />
+        <label for="saturn">saturn</label><br />
+        <input type="radio" id="mars" name="planet" value="mars" />
+        <label for="mars">mars</label><br />
+
+        <p>4.What is the capital city of india</p>
+        <input type="radio" id="chennai" name="capital" value="chennai" />
+        <label for="chennai">chennai</label><br />
+        <input type="radio" id="delhi" name="capital" value="delhi" />
+        <label for="delhi">delhi</label><br />
+        <input type="radio" id="mumbai" name="capital" value="mumbai" />
+        <label for="mumbai">mumbai</label><br />
+
+        <p>5.what is the national animal of USA</p>
+        <input type="radio" id="tiger" name="animal" value="tiger" />
+        <label for="tiger">tiger</label><br />
+        <input type="radio" id="bison" name="animal" value="bison" />
+        <label for="bison">bison</label><br />
+        <input type="radio" id="dog" name="animal" value="dog" />
+        <label for="dog">dog</label><br />
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="message"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
