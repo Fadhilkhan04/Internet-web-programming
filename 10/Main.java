@@ -24,18 +24,18 @@ public class Main {
       statement = connection.createStatement();
 
       // Execute the query
-      String query = "SELECT emp_id, bought, age FROM employee";
+      String query = "SELECT id, name, marks FROM student";
       ResultSet resultSet = statement.executeQuery(query);
 
       // Process and display the result set
-      System.out.println("emp_id\tbought\tage");
+      System.out.println("id\tname\tmarks");
       System.out.println("-------------------------");
       while (resultSet.next()) {
-        int emp_id = resultSet.getInt("emp_id");
-        String bought = resultSet.getString("bought"); // Ensure case matches with DB column
-        int age = resultSet.getInt("age");
+        int id = resultSet.getInt("id");
+        String name = resultSet.getString("name"); // Ensure case matches with DB column
+        int marks = resultSet.getInt("marks");
 
-        System.out.println(emp_id + "\t" + bought + "\t" + age);
+        System.out.println(id + "\t" + name + "\t" + marks);
       }
 
       // Close the result set
