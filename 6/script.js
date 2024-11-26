@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('#jobApplicationForm').on('submit', function(event) {
-      event.preventDefault();
+     event.preventDefault();
       
       // Clear any previous messages
       $('#message').text('');
@@ -38,7 +38,6 @@ $(document).ready(function() {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(email);
   }
-
   // Phone number validation
   function validatePhone(phone) {
       const phonePattern = /^[0-9]{10}$/;

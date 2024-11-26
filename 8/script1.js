@@ -1,7 +1,7 @@
 let currentTime = 1 * 60; 
 let timerInterval;
 
-//correct answers
+// Correct answers
 const correctAnswers = {
     club: "realmadrid",
     chem: "fe",
@@ -10,7 +10,7 @@ const correctAnswers = {
     animal: "bison"
 };
 
-// timer
+// Timer
 function startTimer() {
     timerInterval = setInterval(function() {
         let minutes = Math.floor(currentTime / 60);
@@ -19,41 +19,37 @@ function startTimer() {
         
         if (currentTime <= 0) {
             clearInterval(timerInterval);
-            submitQuiz(); 
+            submitQuiz();
         }
         currentTime--;
     }, 1000);
 }
 
-
-//start timer
+// Start timer
 window.onload = function() {
     startTimer();
+
+    const quizForm = document.getElementById('mcqquizform');
+    quizForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        submitQuiz();
+    });
 };
 
-
-//when the form is submitted
-$(document).ready(function(){
-  $('#mcqquizform').on('submit', function(event) {
-    event.preventDefault();
-    submitQuiz();
-  });
-}); 
-
-//when submitted or timer gone to zero
+// When submitted or timer reaches zero
 function submitQuiz() {
     clearInterval(timerInterval);
-    
+
     let score = 0;
 
     for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
-        const userAnswer = $(`input[name="${question}"]:checked`).val();
-        
-        if (userAnswer === correctAnswer) {
+        const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        if (userAnswer && userAnswer.value === correctAnswer) {
             score++;
         }
     }
-    
-    $('#message').css('color', 'green').text(`Submitted. Your score is ${score} out of ${Object.keys(correctAnswers).length}.`);
-    $('#club').css('color','green').text('Answer : Realmadrid');
+
+    const message = document.getElementById('message');
+    message.style.color = 'green';
+    message.textContent = `Submitted. Your score is ${score} out of ${Object.keys(correctAnswers).length}.`;
 }
