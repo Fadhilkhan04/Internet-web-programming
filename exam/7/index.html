@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      area {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Maps With Hotspots</h1>
+    <img src="img.png" alt="map" usemap="#map" width="800px" height="380px" />
+
+    <map name="map">
+      <area
+        shape="rect"
+        coords="350,10,410,70"
+        alt="location1"
+        onclick="display(0)"
+      />
+      <area
+        shape="rect"
+        coords="50,300,100,370"
+        alt="location2"
+        onclick="display(1)"
+      />
+      <area
+        shape="rect"
+        coords="700,150,780,250"
+        alt="location3"
+        onclick="display(2)"
+      />
+    </map>
+    <h2></h2>
+    <p></p>
+
+    <script>
+      const info = [
+        { title: "location 1", content: "this is my home" },
+        { title: "location 2", content: "this is my turf" },
+        { title: "location 3", content: "this is my school" },
+      ];
+
+      function display(num) {
+        document.querySelector("h2").innerHTML = info[num].title;
+        document.querySelector("p").innerHTML = info[num].content;
+      }
+    </script>
+  </body>
+</html>
