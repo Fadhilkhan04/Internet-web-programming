@@ -11,9 +11,9 @@ function changeImage() {
   slideshow.style.animation = 'none'; // Reset animation
   slideshow.src = images[currentIndex];
   currentIndex = (currentIndex + 1) % images.length;
-  setTimeout(() => {
-      slideshow.style.animation = 'pulse 1.5s ease-in-out forwards'; // Restart animation
-  }, 10);
+  setInterval(function(){
+    slideshow.style.animation = 'mymove 1.5s ease-in-out forwards';
+  },3000);
 }
 
 // Change image every 3 seconds
