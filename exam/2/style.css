@@ -1,0 +1,37 @@
+*{padding: 0;
+margin: 0;}
+
+body{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;  
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+#display{
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 30px;
+  text-align: right;
+}
+button{
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background-color: antiquewhite;
+  color: black;
+}
+button:hover {
+  background: #0056b3;
+}
