@@ -1,0 +1,39 @@
+.map-container{
+  width: 500px;
+  height: 500px;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.hotspot{
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.hotspot:hover{
+  transform: scale(1.2);
+}
+
+.tooltip{
+  display: none;
+  background-color: #333;
+  color: white;
+  position: absolute;
+  padding: 5px 10px;
+}
+
+.hotspot:hover .tooltip{
+  display: block;
+}
