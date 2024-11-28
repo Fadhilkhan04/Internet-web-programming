@@ -1,0 +1,69 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+ 
+}
+.not{
+  top: 50px;
+  left: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  position: relative;
+}
+.sub{
+  animation: fade 2s ease forwards infinite;
+}
+.sub1{
+  animation: slidein 2s ease forwards infinite;
+}
+.sub2{
+  animation: pulse 2s ease forwards infinite;
+}
+.sub3{
+  animation: rotate 2s ease forwards infinite;
+}
+.sub4{
+  animation: movein 2s ease forwards infinite ;
+}
+.sub5{
+  animation: flip 2s ease forwards infinite;
+}
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slidein {
+  from {left: 0px;}
+  to {left: 100px;}
+}
+
+@keyframes pulse{
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+}
+@keyframes rotate{
+  0%,100%{transform: rotateZ(0deg);}
+  25%{transform: rotateZ(90deg);}
+  50%{transform: rotateZ(180deg);}
+  75%{transform: rotateZ(270deg);}
+}
+@keyframes movein {
+  0%   {top: 0px;}
+  25%  {top: 100px;}
+  50%  {top: 50px;}
+  75%  {top: 100px;}
+  100% {top: 0px;}
+}
+@keyframes flip{
+  0%,100%{transform: rotateY(0deg);}
+  50% {transform: rotateY(180deg);}
+}
