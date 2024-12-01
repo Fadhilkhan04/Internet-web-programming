@@ -13,8 +13,19 @@
     tr {
       background-color: white;
     }
+    th {
+      background-color: beige;
+    }
     td {
       background-color: white;
+    }
+    .rotate {
+      position: relative;
+      width: 100px;
+    }
+    #Break {
+      position: absolute;
+      transform: rotate(-90deg);
     }
   </style>
   <body>
@@ -32,14 +43,14 @@
         <th>6th period (2.30PM-3.20PM)</th>
         <th>7th period (3.20PM-4.10PM)</th>
       </tr>
-      <tr>
+      <tr style="position: relative">
         <td>Monday</td>
         <td>csd 3103/05 lab</td>
         <td>csd 3103/05 lab</td>
-        <td rowspan="5">Break</td>
+        <td class="rotate" rowspan="5"><span id="Break">Break</span></td>
         <td>ged 3101</td>
         <td>ged 3101</td>
-        <td rowspan="5">Lunch</td>
+        <td class="rotate" rowspan="5"><span id="Break">Lunch</span></td>
         <td>csd 3101</td>
         <td>sem</td>
         <td>csd 3102</td>
@@ -56,6 +67,7 @@
         <td>csd 3103</td>
         <td>lib</td>
       </tr>
+
       <tr>
         <td>Wednesday</td>
         <td>csd 3102</td>
@@ -68,6 +80,7 @@
         <td>csd 3103</td>
         <td>csd 3107</td>
       </tr>
+
       <tr>
         <td>Thursday</td>
         <td>csd 3103</td>
@@ -93,5 +106,6 @@
         <td>csd 3103/06 lab</td>
       </tr>
     </table>
+    <br />
   </body>
 </html>
